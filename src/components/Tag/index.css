@@ -1,0 +1,6 @@
+.tag {
+  border-radius: 100vmax;
+  padding: 3px 22px;
+  background:red;
+  max-width: max-content
+}
