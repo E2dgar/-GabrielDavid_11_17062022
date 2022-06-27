@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import stringToClassName from '../../utils/strings';
+import { stringToClassName } from '../../services/strings';
 import './accordion.css';
 
 const Select = ({ label, panelType }) => {
