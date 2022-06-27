@@ -1,4 +1,4 @@
-import { fontFamily } from './constants';
+import { fontFamily, fontSize, colors } from './constants';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -374,7 +374,11 @@ const GlobalStyle = createGlobalStyle`
 
   /* ========== Global ============================================================== */
   * {
-    font-family: ${fontFamily.main}
+    font-family: ${fontFamily.main};
+    font-weight: 500;
+    font-size: ${fontSize.L};
+    color: ${colors.white};      
+    }}
   }
 `;
 

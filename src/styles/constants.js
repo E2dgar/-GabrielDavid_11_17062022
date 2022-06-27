@@ -1,5 +1,5 @@
 const colors = {
-    primary: '#FF060',
+    primary: '#FF6060',
     white: '#FFFFFF',
     toogle_bkg: 'F7F7F7',
     rate_bkg: 'F6F6F6',
@@ -14,15 +14,16 @@ const fontFamily = {
 };
 
 const fontSize = {
-    XXS: '.75rem',
-    XS: '.81rem',
-    Small: '.875rem',
-    Medium: '1.125rem',
-    Large: '1.5rem',
-    single_H1: '2.25rem',
-    home_H1: '3rem',
-    mobile_XXL: '6rem',
-    desktop_XXL: '18rem'
+    XXS: '1rem',
+    XS: '1.2rem',
+    S: '.1.3rem',
+    M: '1.4rem',
+    L: '1.8rem',
+    XL: '2.4rem',
+    single_H1: '3.6rem',
+    home_H1: '4.8rem',
+    mobile_XXL: '9.6rem',
+    desktop_XXL: '28.8rem'
 };
 
 export { colors, fontSize, fontFamily };
