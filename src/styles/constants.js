@@ -1,9 +1,9 @@
 const colors = {
     primary: '#FF6060',
     white: '#FFFFFF',
-    toogle_bkg: 'F7F7F7',
-    rate_bkg: 'F6F6F6',
-    avatar_bkg: 'C4C4C4',
+    toogle_bkg: '"F7F7F7',
+    main_bkg: '#F6F6F6',
+    avatar_bkg: '#C4C4C4',
     card_overlay:
         'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%)',
     banner_overlay: 'rgba(0, 0, 0, .3)'

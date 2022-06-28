@@ -1,30 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import Tag from '../components/Tag/Tag';
 import Select from '../components/Select/Accordion';
-import Gallery from '../components/Galleries/Gallery';
-import { useFetch } from '../services/hook';
-import { path } from '../constants';
-import Loader from '../components/loader';
+import Gallery from '../components/Layouts/Gallery';
 import { useContext } from 'react';
 import { DataContext } from '../services/Provider';
+import MainLayout from '../components/Layouts/Gallery/Main';
+import Hero from '../containers/Hero';
 
 const Home = () => {
     const { data } = useContext(DataContext);
+    const logementsData = data[0];
+    const siteData = data[1];
 
-    console.log('data', data);
     return (
-        <>
-            <h1>C'est la home</h1>
-            <Tag tag="Un tag" />
-            <Select label="Equipement" panelType="text" />
-            {data.error ? (
+        <MainLayout>
+            <Hero data={siteData} />
+
+            {logementsData.error ? (
                 <p>erreur</p>
-            ) : data.isLoading ? (
+            ) : logementsData.isLoading ? (
                 <p>load</p>
             ) : (
-                <Gallery data={data} />
+                <Gallery data={logementsData.data} />
             )}
-        </>
+        </MainLayout>
     );
 };
 

@@ -374,10 +374,11 @@ const GlobalStyle = createGlobalStyle`
 
   /* ========== Global ============================================================== */
   * {
-    font-family: ${fontFamily.main};
-    font-weight: 500;
-    font-size: ${fontSize.L};
-    color: ${colors.white};      
+      font-family: ${fontFamily.main};
+      font-weight: 500;
+      font-size: ${fontSize.L};
+      color: ${colors.white};     
+      box-sizing: border-box; 
     }}
   }
 `;

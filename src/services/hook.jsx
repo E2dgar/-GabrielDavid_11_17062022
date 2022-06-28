@@ -12,10 +12,9 @@ const useFetch = (url) => {
 
         async function fetchData() {
             try {
-                const response = await fetch('http://localhost:3000/data.json');
+                const response = await fetch(url);
                 const data = await response.json();
 
-                data.map((elet) => console.log(elet));
                 setData(data);
             } catch (err) {
                 console.log('error', err);
