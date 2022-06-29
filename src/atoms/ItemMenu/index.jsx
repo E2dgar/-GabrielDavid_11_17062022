@@ -16,6 +16,12 @@ const StyledItem = styled.li`
         &.active-link {
             text-decoration: underline;
         }
+
+        @media (max-width: 768px) {
+            text-transform: uppercase;
+            font-size: ${fontSize.XS};
+            margin-left: 0;
+        }
     }
 `;
 

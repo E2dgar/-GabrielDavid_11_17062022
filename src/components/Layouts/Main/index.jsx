@@ -5,7 +5,7 @@ const StyledMain = styled.main`
     max-width: 1256px;
     margin: 0 auto;
     text-align: center;
-    padding: 0 8px;
+    padding: 0 20px;
 `;
 
 const MainLayout = ({ children }) => {

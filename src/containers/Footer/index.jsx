@@ -15,6 +15,10 @@ const StyledFooter = styled.footer`
 
     & p {
         font-size: ${fontSize.XL};
+
+        @media (max-width: 768px) {
+            font-size: ${fontSize.XS};
+        }
     }
 `;
 

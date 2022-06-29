@@ -4,11 +4,21 @@ import styled from 'styled-components';
 
 const StyledHeader = styled.header`
     max-width: 1256px;
-    padding: 0 8px;
-    margin: 40px auto 63px;
+    padding: 40px 8px 63px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
+
+    & img {
+        @media (max-width: 768px) {
+            max-width: 145px;
+        }
+    }
 `;
 
 const Header = () => {

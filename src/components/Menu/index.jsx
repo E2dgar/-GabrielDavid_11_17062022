@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const StyledMenu = styled.ul`
     display: flex;
+    padding-left: 0;
 `;
 
 const Menu = () => {

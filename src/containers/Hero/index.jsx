@@ -14,6 +14,10 @@ const StyledHero = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 768px) {
+        height: 111px;
+    }
+
     &::after {
         content: '';
         position: absolute;
