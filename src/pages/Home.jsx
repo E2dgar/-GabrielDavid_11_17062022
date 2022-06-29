@@ -1,27 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import Tag from '../components/Tag/Tag';
-import Select from '../components/Select/Accordion';
 import Gallery from '../components/Layouts/Gallery';
-import { useContext } from 'react';
-import { DataContext } from '../services/Provider';
-import MainLayout from '../components/Layouts/Gallery/Main';
+import MainLayout from '../components/Layouts/Main';
 import Hero from '../containers/Hero';
+import { useFetch } from '../services/hook';
+import { path } from '../services/api/api';
+import renderData from '../services/renderDataState';
 
 const Home = () => {
-    const { data } = useContext(DataContext);
-    const logementsData = data[0];
-    const siteData = data[1];
+    const logements = useFetch(path.API_URL_LOGEMENTS);
+    const contenus = useFetch(path.API_URL_CONTENUS);
 
     return (
         <MainLayout>
-            <Hero data={siteData} />
-
-            {logementsData.error ? (
-                <p>erreur</p>
-            ) : logementsData.isLoading ? (
-                <p>load</p>
+            {renderData(contenus) ? (
+                <Hero data={contenus.data.home} />
             ) : (
-                <Gallery data={logementsData.data} />
+                renderData(contenus)
+            )}
+
+            {renderData(logements) ? (
+                <Gallery data={logements.data} />
+            ) : (
+                renderData(logements)
             )}
         </MainLayout>
     );

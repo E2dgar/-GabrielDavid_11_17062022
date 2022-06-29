@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './containers/header';
+import Header from './containers/Header';
 import reportWebVitals from './reportWebVitals';
 import Home from './pages/Home';
 import Essai from './pages/Essai';
 import Peror from './pages/404';
 import Logement from './pages/Logement';
 import GlobalStyle from './styles/global';
-import { DataProvider } from './services/Provider';
+import Footer from './containers/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -16,15 +16,17 @@ root.render(
     <React.StrictMode>
         <Router>
             <GlobalStyle />
+
             <Header />
-            <DataProvider>
-                <Routes>
-                    <Route path="*" element={<Peror />} />
-                    <Route path="/" element={<Home />} />
-                    <Route path="/test" element={<Essai />} />
-                    <Route path="/logement/:id" element={<Logement />} />
-                </Routes>
-            </DataProvider>
+
+            <Routes>
+                <Route path="*" element={<Peror />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/test" element={<Essai />} />
+                <Route path="/logement/:id" element={<Logement />} />
+            </Routes>
+
+            <Footer />
         </Router>
     </React.StrictMode>
 );

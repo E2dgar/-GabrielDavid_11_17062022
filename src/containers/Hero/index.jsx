@@ -1,8 +1,5 @@
-import hero from '../../assets/hero.jpg';
-import H1Hero from '../../atoms/items-menu/Texts/H1/Hero';
+import H1Hero from '../../atoms/Texts/H1/Hero';
 import image from '../../assets/hero.jpg';
-import { useContext } from 'react';
-import { DataContext } from '../../services/Provider';
 import styled from 'styled-components';
 import { colors } from '../../styles/constants';
 
@@ -35,10 +32,10 @@ const StyledHero = styled.div`
 `;
 
 const Hero = ({ data }) => {
-    console.log('hero', data.data.siteText[0].home.h1);
+    console.log('h', data);
     return (
         <StyledHero>
-            <H1Hero text={data.data.siteText[0].home.h1} />
+            <H1Hero text={data.h1} />{' '}
         </StyledHero>
     );
 };

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fontSize } from '../../../../../styles/constants';
+import { fontSize } from '../../../../styles/constants';
 
 const StyledTitle = styled.h1`
     font-size: ${fontSize.home_H1};
