@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const StyledHeader = styled.header`
     max-width: 1256px;
-    padding: 40px 8px 63px;
+    padding: 40px 20px 63px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
