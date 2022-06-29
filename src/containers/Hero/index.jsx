@@ -36,7 +36,6 @@ const StyledHero = styled.div`
 `;
 
 const Hero = ({ data }) => {
-    console.log('h', data);
     return (
         <StyledHero>
             <H1Hero text={data.h1} />{' '}
