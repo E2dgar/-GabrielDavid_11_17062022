@@ -12,6 +12,7 @@ const StyledFooter = styled.footer`
     flex-direction: column;
     align-items: center;
     padding: 66px 8px 30px;
+    margin-top: auto;
 
     & p {
         font-size: ${fontSize.XL};
@@ -30,7 +31,7 @@ const Footer = () => {
             <img src={image} alt="Logo Kasa" />
 
             {renderData(contenus) ? (
-                <p>{contenus.data.footer.copy}</p>
+                <p>{contenus.data?.footer?.copy}</p>
             ) : (
                 renderData(contenus)
             )}

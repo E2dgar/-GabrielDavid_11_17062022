@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './containers/Header';
 import reportWebVitals from './reportWebVitals';
 import Home from './pages/Home';
-import Essai from './pages/Essai';
+import About from './pages/About';
 import Peror from './pages/404';
 import Logement from './pages/Logement';
 import GlobalStyle from './styles/global';
@@ -16,17 +16,18 @@ root.render(
     <React.StrictMode>
         <Router>
             <GlobalStyle />
+            <div className="app">
+                <Header />
 
-            <Header />
+                <Routes>
+                    <Route path="*" element={<Peror />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/logement/:id" element={<Logement />} />
+                </Routes>
 
-            <Routes>
-                <Route path="*" element={<Peror />} />
-                <Route path="/" element={<Home />} />
-                <Route path="/test" element={<Essai />} />
-                <Route path="/logement/:id" element={<Logement />} />
-            </Routes>
-
-            <Footer />
+                <Footer />
+            </div>
         </Router>
     </React.StrictMode>
 );

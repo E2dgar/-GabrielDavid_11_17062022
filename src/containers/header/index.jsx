@@ -3,6 +3,7 @@ import Menu from '../../components/Menu';
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
+    width: 100%;
     max-width: 1256px;
     padding: 40px 20px 63px;
     margin: 0 auto;

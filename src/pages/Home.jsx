@@ -1,6 +1,7 @@
 import Gallery from '../components/Layouts/Gallery';
 import MainLayout from '../components/Layouts/Main';
 import Hero from '../containers/Hero';
+import image from '../assets/hero.jpg';
 import { useFetch } from '../services/hook';
 import { path } from '../services/api/api';
 import renderData from '../services/renderDataState';
@@ -12,7 +13,7 @@ const Home = () => {
     return (
         <MainLayout>
             {renderData(contenus) ? (
-                <Hero data={contenus.data.home} />
+                <Hero data={contenus.data.home} background={image} />
             ) : (
                 renderData(contenus)
             )}

@@ -379,7 +379,12 @@ const GlobalStyle = createGlobalStyle`
       font-size: ${fontSize.L};
       color: ${colors.white};     
       box-sizing: border-box; 
-    }}
+    }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
 `;
 

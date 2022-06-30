@@ -2,7 +2,7 @@ const colors = {
     primary: '#FF6060',
     white: '#FFFFFF',
     black: '#000000',
-    toogle_bkg: '"F7F7F7',
+    toogle_bkg: '#F7F7F7',
     main_bkg: '#F6F6F6',
     avatar_bkg: '#C4C4C4',
     card_overlay:
