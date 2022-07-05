@@ -6,27 +6,31 @@ import { useFetch } from '../services/hook';
 import { path } from '../services/api/api';
 import Toogle from '../components/Toogle';
 import styled from 'styled-components';
+import { useEffect } from 'react';
 
-const StyledDl = styled.dl`
+const ToogleList = styled.dl`
     max-width: 1022px;
-    margin: auto;
+    margin: 0 auto 4rem;
 `;
 
-const About = () => {
-    const content = useFetch(path.API_URL_CONTENUS);
-    console.log('c', content);
+const About = ({ data }) => {
+    useEffect(() => {
+        document.title = 'A propos';
+    }, []);
+
     return (
         <MainLayout>
             <Hero background={image} />
-            <StyledDl>
-                {content?.data?.about?.map((elt) => (
+
+            <ToogleList>
+                {data.map((elt) => (
                     <Toogle
                         key={elt.id}
                         label={elt.label}
                         component={<Paragraph content={elt.content} />}
                     />
                 ))}
-            </StyledDl>
+            </ToogleList>
         </MainLayout>
     );
 };

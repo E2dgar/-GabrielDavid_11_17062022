@@ -17,7 +17,7 @@ const fontFamily = {
 const fontSize = {
     XXS: '1rem',
     XS: '1.2rem',
-    S: '.1.3rem',
+    S: '1.3rem',
     M: '1.4rem',
     L: '1.8rem',
     XL: '2.4rem',

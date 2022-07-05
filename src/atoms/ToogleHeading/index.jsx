@@ -9,8 +9,12 @@ const StyledDt = styled.dt`
     width: 100%;
     max-width: 1222px;
     padding: 0.8rem 1.6rem;
+    margin: 30px 0 0;
     border-radius: 5px;
     background-color: ${colors.primary};
+    position: relative;
+    z-index: 1;
+
     & button {
         appearance: none;
         border: none;
@@ -19,12 +23,21 @@ const StyledDt = styled.dt`
         justify-content: space-between;
         align-items: center;
         color: ${colors.white};
-        font-size: ${fontSize.L};
+        font-size: ${fontSize.XL};
         width: 100%;
         cursor: pointer;
 
+        @media (max-width: 768px) {
+            font-size: ${fontSize.S};
+        }
+
         svg {
             transition: transform 0.3s ease-in-out;
+            width: 29px;
+
+            @media (max-width: 768px) {
+                width: 18px;
+            }
         }
 
         &[aria-expanded='true'] svg {

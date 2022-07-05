@@ -23,18 +23,12 @@ const StyledFooter = styled.footer`
     }
 `;
 
-const Footer = () => {
-    const contenus = useFetch(path.API_URL_CONTENUS);
-
+const Footer = ({ data }) => {
+    console.log('footer', data);
     return (
         <StyledFooter>
             <img src={image} alt="Logo Kasa" />
-
-            {renderData(contenus) ? (
-                <p>{contenus.data?.footer?.copy}</p>
-            ) : (
-                renderData(contenus)
-            )}
+            <p>{data?.content?.copy}</p>
         </StyledFooter>
     );
 };

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { fontSize } from '../../../../styles/constants';
+import { colors, fontSize } from '../../../../styles/constants';
 
 const StyledTitle = styled.h1`
-    font-size: ${fontSize.home_H1};
+    font-size: ${fontSize.single_H1};
+    color: ${colors.primary};
     position: relative;
     text-align: center;
     z-index: 10;
@@ -10,12 +11,11 @@ const StyledTitle = styled.h1`
     @media (max-width: 768px) {
         font-size: ${fontSize.XL};
         text-align: left;
-        max-width: 19ch;
     }
 `;
 
-const H1Hero = ({ children }) => {
+const H1Logement = ({ children }) => {
     return <StyledTitle>{children}</StyledTitle>;
 };
 
-export default H1Hero;
+export default H1Logement;

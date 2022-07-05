@@ -24,7 +24,7 @@ const StyledGallery = styled.ul`
 const Gallery = ({ data }) => {
     return (
         <StyledGallery>
-            {data.map((elt) => (
+            {data?.map((elt) => (
                 <Thumb key={elt.id} data={elt} />
             ))}
         </StyledGallery>

@@ -34,10 +34,11 @@ const StyledHero = styled.div`
     }
 `;
 
-const Hero = ({ data, background }) => {
+const Hero = ({ content, background }) => {
+    console.log('heroe', content);
     return (
         <StyledHero background={background}>
-            {data && <H1Hero text={data.h1} />}
+            <H1Hero>{content?.h1} </H1Hero>
         </StyledHero>
     );
 };

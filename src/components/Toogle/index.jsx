@@ -12,7 +12,9 @@ const StyledDD = styled.dd`
     overflow: hidden;
     background-color: ${colors.toogle_bkg};
     margin: 0;
-
+    box-shadow: 0 -5px ${colors.toogle_bkg};
+    postion: relative;
+    z-index: -1;
     &.show {
         max-height: 50vh;
     }
@@ -28,7 +30,7 @@ const Toogle = ({ label, component }) => {
     };
 
     return (
-        <dl>
+        <>
             <ToogleHeading
                 label={label}
                 normalizeLabel={normalizeLabel}
@@ -40,7 +42,7 @@ const Toogle = ({ label, component }) => {
                 className={`panels ${isOpen ? 'show' : ''}`}>
                 {component}
             </StyledDD>
-        </dl>
+        </>
     );
 };
 

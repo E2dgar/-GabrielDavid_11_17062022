@@ -14,8 +14,8 @@ const StyledTag = styled.div`
     }
 `;
 
-const Tag = ({ tag }) => {
-    return <StyledTag className="tag">{tag}</StyledTag>;
+const Tag = ({ children }) => {
+    return <StyledTag className="tag">{children}</StyledTag>;
 };
 
 export default Tag;
