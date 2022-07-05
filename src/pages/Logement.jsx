@@ -9,7 +9,6 @@ import { path } from '../services/api/api';
 import { useFetch } from '../services/hook';
 import Rate from '../atoms/Rate.jsx';
 import Toogle from '../components/Toogle';
-import ToogleHeading from '../atoms/ToogleHeading';
 import Paragraph from '../atoms/Texts/Paragraph';
 import List from '../atoms/Liste';
 import Slider from '../containers/Slider';
@@ -27,11 +26,9 @@ const Logement = ({ data }) => {
         document.title = logement.title;
     });
 
-    console.log(logement);
-
     return (
         <MainLayout>
-            <Slider content={logement.pictures} />
+            <Slider content={logement?.pictures} />
             <H1Logement>{logement?.title}</H1Logement>
             <H2>{logement?.location}</H2>
             <Avatar data={logement?.host} />

@@ -17,6 +17,7 @@ const App = () => {
         isLoading: logementsIsLoading,
         error: logementError
     } = useFetch(path.API_URL_LOGEMENTS);
+
     const {
         data: content,
         isLoading: contentsIsLoading,
