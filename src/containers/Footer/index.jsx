@@ -23,12 +23,11 @@ const StyledFooter = styled.footer`
     }
 `;
 
-const Footer = ({ data }) => {
-    console.log('footer', data);
+const Footer = ({ content }) => {
     return (
         <StyledFooter>
             <img src={image} alt="Logo Kasa" />
-            <p>{data?.content?.copy}</p>
+            <p>{content?.copy}</p>
         </StyledFooter>
     );
 };

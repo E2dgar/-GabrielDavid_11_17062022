@@ -1,16 +1,20 @@
 import Gallery from '../components/Layouts/Gallery';
 import MainLayout from '../components/Layouts/Main';
+import Layout from '../containers/Layout';
 import Hero from '../containers/Hero';
-import image from '../assets/hero.jpg';
-import renderData from '../services/renderDataState';
+import { useFetch } from '../services/hook';
+import { path } from '../services/api/api';
+import Loader from '../atoms/Loader';
 
-const Home = ({ data }) => {
+const Home = ({ data, content }) => {
     return (
-        <MainLayout>
-            <Hero background={image} content={data?.content} />
+        <Layout content={content?.footer}>
+            <MainLayout>
+                <Hero content={content?.home} />
 
-            <Gallery data={data?.logements} />
-        </MainLayout>
+                <Gallery data={data} />
+            </MainLayout>
+        </Layout>
     );
 };
 

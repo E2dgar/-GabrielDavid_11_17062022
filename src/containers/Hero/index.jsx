@@ -1,6 +1,7 @@
 import H1Hero from '../../atoms/Texts/H1/Hero';
 import styled from 'styled-components';
 import { colors } from '../../styles/constants';
+import image from '../../assets/hero.jpg';
 
 const StyledHero = styled.div`
     max-width: 100%;
@@ -34,10 +35,10 @@ const StyledHero = styled.div`
     }
 `;
 
-const Hero = ({ content, background }) => {
+const Hero = ({ content }) => {
     console.log('heroe', content);
     return (
-        <StyledHero background={background}>
+        <StyledHero background={image}>
             <H1Hero>{content?.h1} </H1Hero>
         </StyledHero>
     );
