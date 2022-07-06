@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Paragraph from '../../atoms/Texts/Paragraph';
 import ToogleHeading from '../../atoms/ToogleHeading';
 import { stringToClassName } from '../../services/strings';
 import styled from 'styled-components';

@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 import image from '../../assets/footer.png';
-import { path } from '../../services/api/api';
-import { useFetch } from '../../services/hook';
-import renderData from '../../services/renderDataState';
 import { colors, fontSize } from '../../styles/constants';
 
 const StyledFooter = styled.footer`

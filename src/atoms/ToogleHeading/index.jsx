@@ -1,8 +1,5 @@
-import { useState } from 'react';
-import { stringToClassName } from '../../services/strings';
 import styled from 'styled-components';
 import { colors, fontSize } from '../../styles/constants';
-import arrow from '../../assets/arrow.png';
 import Arrow from '../svg/arrow';
 
 const StyledDt = styled.dt`
@@ -52,7 +49,6 @@ const ToogleHeading = ({
     handleToogle,
     isPanelOpen
 }) => {
-    console.log('lab', label);
     return (
         <StyledDt className="heading-panel-wrapper">
             <button
