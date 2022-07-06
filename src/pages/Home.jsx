@@ -5,9 +5,9 @@ import Hero from '../containers/Hero';
 
 const Home = ({ data, content }) => {
     return (
-        <Layout content={content?.footer}>
+        <Layout content={content.footer}>
             <MainLayout>
-                <Hero content={content?.home} />
+                <Hero content={content.home} />
 
                 <Gallery data={data} />
             </MainLayout>

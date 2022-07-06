@@ -36,7 +36,6 @@ const StyledHero = styled.div`
 `;
 
 const Hero = ({ content }) => {
-    console.log('heroe', content);
     return (
         <StyledHero background={image}>
             <H1Hero>{content?.h1} </H1Hero>
