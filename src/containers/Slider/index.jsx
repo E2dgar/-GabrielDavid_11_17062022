@@ -23,24 +23,25 @@ const StyledSlider = styled.section`
         object-fit: cover;
         object-position: center center;
     }
+
     p {
         position: absolute;
     }
 `;
 const Slider = ({ content }) => {
-    const [index, setIndex] = useState(0);
+    const [index, setIndex] = useState(1);
 
     const handleNext = () => {
-        if (index === content.length - 1) {
-            setIndex(0);
+        if (index === content?.length) {
+            setIndex(1);
         } else {
             setIndex(index + 1);
         }
     };
 
     const handlePrev = () => {
-        if (index === 0) {
-            setIndex(content.length - 1);
+        if (index === 1) {
+            setIndex(content?.length);
         } else {
             setIndex(index - 1);
         }
@@ -56,9 +57,13 @@ const Slider = ({ content }) => {
             <SlideButton direction="prev" handleClick={handleClick} />
 
             <div className="slides-container">
-                <img src={content?.[index]} alt={`Accomodation-${index}`} />
+                <img
+                    src={content?.[index - 1]}
+                    alt={`Accomodation-${index}`}
+                    className={`img-${index}`}
+                />
             </div>
-
+            <SlideIndex index={index} length={content?.length} />
             <SlideButton direction="next" handleClick={handleClick} />
         </StyledSlider>
     );

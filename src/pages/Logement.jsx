@@ -25,19 +25,26 @@ const Logement = ({ data, content }) => {
         <Layout content={content?.footer}>
             <MainLayout>
                 <Slider content={logement?.pictures} />
+
                 <H1Logement>{logement?.title}</H1Logement>
+
                 <H2>{logement?.location}</H2>
+
                 <Avatar data={logement?.host} />
+
                 <div>
                     {logement?.tags?.map((tag, index) => (
                         <Tag key={index}>{tag}</Tag>
                     ))}
                 </div>
+
                 <Rate rating={parseInt(logement?.rating)} />
+
                 <Toogle
                     label="Description"
                     component={<Paragraph content={logement?.description} />}
                 />
+
                 <Toogle
                     label="Équipements"
                     component={<List content={logement?.equipments} />}
