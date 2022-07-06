@@ -5,6 +5,8 @@ import GlobalStyle from './styles/global';
 import { useFetch } from './services/hook';
 import { path } from './services/api/api';
 import Loader from './atoms/Loader';
+import About from './pages/About';
+import P404 from './pages/404';
 
 const App = () => {
     const {
@@ -30,24 +32,15 @@ const App = () => {
             <GlobalStyle />
 
             <Routes>
-                {/*} <Route
-                    path="*"
-                    element={
-                        <P404 data={{ content: datas.P404, contentError }} />
-                    }
-                />*/}
+                <Route path="*" element={<P404 content={content} />} />
 
                 <Route
                     path="/"
                     element={<Home data={logements} content={content} />}
                 />
 
-                {/* <Route
-                    path="/about"
-                    element={
-                        <About data={{ content: datas.about, contentError }} />
-                    }
-                />*/}
+                <Route path="/about" element={<About content={content} />} />
+
                 <Route
                     path="/logement/:id"
                     element={<Logement data={logements} content={content} />}

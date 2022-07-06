@@ -5,31 +5,34 @@ import Paragraph from '../atoms/Texts/Paragraph';
 import Toogle from '../components/Toogle';
 import styled from 'styled-components';
 import { useEffect } from 'react';
+import Layout from '../containers/Layout';
 
 const ToogleList = styled.dl`
     max-width: 1022px;
     margin: 0 auto 4rem;
 `;
 
-const About = ({ data }) => {
+const About = ({ content }) => {
     useEffect(() => {
         document.title = 'A propos';
     }, []);
 
     return (
-        <MainLayout>
-            <Hero background={image} />
+        <Layout content={content.footer}>
+            <MainLayout>
+                <Hero background={image} content={content.home} />
 
-            <ToogleList>
-                {data.map((elt) => (
-                    <Toogle
-                        key={elt.id}
-                        label={elt.label}
-                        component={<Paragraph content={elt.content} />}
-                    />
-                ))}
-            </ToogleList>
-        </MainLayout>
+                <ToogleList>
+                    {content?.about.map((elt) => (
+                        <Toogle
+                            key={elt.id}
+                            label={elt.label}
+                            component={<Paragraph content={elt.content} />}
+                        />
+                    ))}
+                </ToogleList>
+            </MainLayout>
+        </Layout>
     );
 };
 

@@ -17,9 +17,13 @@ const Logement = ({ data, content }) => {
     const [logement, setLogement] = useState();
 
     useEffect(() => {
-        setLogement(data?.filter((elt) => elt.id === id)[0]);
+        setLogement(data?.filter((elt) => elt.id === 12)[0]);
         document.title = logement?.title;
     }, [data, content, id, logement]);
+
+    if (!logement) {
+        /*TODO redirection 404 si mauvais id*/
+    }
 
     return (
         <Layout content={content?.footer}>

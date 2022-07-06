@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import MainLayout from '../components/Layouts/Main';
 import styled from 'styled-components';
 import { colors, fontSize } from '../styles/constants';
+import Layout from '../containers/Layout';
 
 const Styled404 = styled.section`
     padding-bottom: 10rem;
@@ -37,15 +38,17 @@ const Styled404 = styled.section`
     }
 `;
 
-const P404 = ({ data }) => {
+const P404 = ({ content }) => {
     return (
-        <MainLayout>
-            <Styled404>
-                <h1>{data.title}</h1>
-                <p>{data.content}</p>
-                <Link to="">{data.link}</Link>
-            </Styled404>
-        </MainLayout>
+        <Layout content={content?.footer}>
+            <MainLayout>
+                <Styled404>
+                    <h1>{content?.P404?.title}</h1>
+                    <p>{content?.P404?.content}</p>
+                    <Link to="">{content?.P404?.link}</Link>
+                </Styled404>
+            </MainLayout>
+        </Layout>
     );
 };
 
