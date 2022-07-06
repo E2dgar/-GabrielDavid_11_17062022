@@ -27,7 +27,7 @@ const Logement = ({ data, content }) => {
                 <Slider content={logement?.pictures} />
                 <H1Logement>{logement?.title}</H1Logement>
                 <H2>{logement?.location}</H2>
-                <Avatar />
+                <Avatar data={logement?.host} />
                 <div>
                     {logement?.tags?.map((tag, index) => (
                         <Tag key={index}>{tag}</Tag>

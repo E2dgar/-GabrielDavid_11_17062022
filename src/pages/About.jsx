@@ -2,8 +2,6 @@ import MainLayout from '../components/Layouts/Main';
 import Hero from '../containers/Hero';
 import image from '../assets/about.jpg';
 import Paragraph from '../atoms/Texts/Paragraph';
-import { useFetch } from '../services/hook';
-import { path } from '../services/api/api';
 import Toogle from '../components/Toogle';
 import styled from 'styled-components';
 import { useEffect } from 'react';
