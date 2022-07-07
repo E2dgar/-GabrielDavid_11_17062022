@@ -14,7 +14,7 @@ const StyledAvatar = styled.figure`
 
 const Avatar = ({ data }) => {
     return (
-        <StyledAvatar>
+        <StyledAvatar className="avatar">
             <img src={data?.picture} alt={data?.name} />
             <figcaption>{data?.name}</figcaption>
         </StyledAvatar>

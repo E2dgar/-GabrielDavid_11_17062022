@@ -373,8 +373,35 @@ const GlobalStyle = createGlobalStyle`
 
 
   /* ========== Global ============================================================== */
+  :root {
+    --color-primary: #FF6060;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --background-main: #F6F6F6;
+    --background-toogle: #F7F7F7;
+    --background-avatar: #C4C4C4;
+    --overlay-card : linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    --overlay-banner: rgba(0, 0, 0, .3);
+
+    --font-XXS: 1rem;
+    --font-XS: 1.2rem;
+    --font-S: 1.3rem;
+    --font-M: 1.4rem;
+    --font-L: 1.8rem;
+    --font-XL: 2.4rem;
+    --font-XXL: 28.8rem;
+    --font-XXL-mobile: 9.6rem;
+    --font-H1-single: 3.6rem;
+    --font-H1-home: 4.8rem;
+  }
+  
+  @font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
+   }
+  
   * {
-      font-family: ${fontFamily.main};
+      font-family: 'Montserrat', sans-serif;
       font-weight: 500;
       font-size: ${fontSize.L};
       color: ${colors.white};     
