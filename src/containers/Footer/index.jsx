@@ -4,6 +4,7 @@ import image from '../../assets/footer.png';
 
 /**
  * Component for showing Footer
+ * @component
  */
 const Footer = ({ content }) => {
     return (
