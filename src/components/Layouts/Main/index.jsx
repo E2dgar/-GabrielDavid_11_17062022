@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledMain = styled.main`
     width: 100%;
     max-width: 1256px;
-    margin: 0 auto;
+    margin: 0 auto 20rem;
     text-align: center;
     padding: 0 20px;
 `;

@@ -1,0 +1,6 @@
+.slide-index {
+    font-size: var(--font-L);
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+}

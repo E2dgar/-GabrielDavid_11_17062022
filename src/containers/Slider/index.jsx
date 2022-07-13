@@ -1,33 +1,9 @@
 import { useState } from 'react';
-import styled from 'styled-components';
-import SlideButton from '../../atoms/SlideButton/SlideButton';
-import SlideIndex from '../../atoms/SlideIndex';
+import SlideButton from '../../atoms/slideButton';
+import SlideIndex from '../../atoms/slideIndex';
+import SliderImg from '../../atoms/slider/img';
+import './index.css';
 
-const StyledSlider = styled.section`
-    width: 100%;
-    max-width: 1240px;
-    height: 415px;
-    overflow: hidden;
-    position: relative;
-
-    div {
-        width: 300%;
-        display: flex;
-        padding: 0;
-        margin: 0;
-    }
-
-    img {
-        flex-basis: calc(100% / 3);
-        height: 415px;
-        object-fit: cover;
-        object-position: center center;
-    }
-
-    p {
-        position: absolute;
-    }
-`;
 const Slider = ({ content }) => {
     const [index, setIndex] = useState(1);
 
@@ -47,25 +23,18 @@ const Slider = ({ content }) => {
         }
     };
 
-    const handleClick = {
-        prev: handlePrev,
-        next: handleNext
-    };
-
     return (
-        <StyledSlider>
-            <SlideButton direction="prev" handleClick={handleClick} />
+        <section className="slider">
+            <SlideButton direction="prev" handleClick={handlePrev} />
 
             <div className="slides-container">
-                <img
-                    src={content?.[index - 1]}
-                    alt={`Accomodation-${index}`}
-                    className={`img-${index}`}
-                />
+                <SliderImg content={content} index={index} />
             </div>
+
             <SlideIndex index={index} length={content?.length} />
-            <SlideButton direction="next" handleClick={handleClick} />
-        </StyledSlider>
+
+            <SlideButton direction="next" handleClick={handleNext} />
+        </section>
     );
 };
 

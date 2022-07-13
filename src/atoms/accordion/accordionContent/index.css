@@ -1,0 +1,14 @@
+.logement-accordion-content {
+    max-height: 0;
+    transition: max-height 0.35s ease-in-out;
+    overflow: hidden;
+    background-color: var(--background-main);
+    margin: 0;
+    box-shadow: 0 -5px var(--background-toogle);
+    position: relative;
+    z-index: -1;
+}
+
+.logement-accordion-content.show {
+    max-height: 50vh;
+}

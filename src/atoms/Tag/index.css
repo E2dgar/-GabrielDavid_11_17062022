@@ -1,6 +1,16 @@
 .tag {
-  border-radius: 100vmax;
-  padding: 3px 22px;
-  background:red;
-  max-width: max-content
+    border-radius: 100vmax;
+    padding: 3px 22px;
+    background-color: var(--color-primary);
+    max-width: max-content;
+    font-size: var(--font-M);
+    line-height: 1.4;
+    list-style: none;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .tag {
+        font-size: var(--font-XXS);
+    }
 }

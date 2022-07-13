@@ -1,19 +1,21 @@
-import styled from 'styled-components';
-import { fontSize } from '../../styles/constants';
+import PropTypes from 'prop-types';
+import './index.css';
 
-const StyledP = styled.p`
-    font-size: ${fontSize.L};
-    postion: absolute;
-    bottom: 15px;
-    left: 50%;
-`;
-
+/**
+ *
+ * Component for showing index/length for slider
+ */
 const SlideIndex = ({ index, length }) => {
     return (
-        <StyledP>
+        <p className="slide-index">
             {index}/{length}
-        </StyledP>
+        </p>
     );
+};
+
+SlideIndex.propTypes = {
+    index: PropTypes.number.isRequired,
+    length: PropTypes.number.isRequired
 };
 
 export default SlideIndex;

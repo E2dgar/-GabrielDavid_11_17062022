@@ -1,0 +1,31 @@
+.slide-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.slide-button.prev {
+    transform: rotate(180deg);
+    left: 20px;
+    right: unset;
+}
+
+.slide-button svg {
+    width: 48px;
+    height: 80px;
+    fill: none;
+}
+
+.slide-button svg path {
+    fill: white;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-button svg {
+        width: 12px;
+        height: 20px;
+    }
+}

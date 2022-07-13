@@ -397,7 +397,7 @@ const GlobalStyle = createGlobalStyle`
   
   @font-face {
     font-family: "Montserrat";
-    src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
+    src: url("../font/Montserrat-Regular.ttf") format("truetype");
    }
   
   * {
@@ -413,6 +413,7 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     min-height: 100vh;
   }
+
 `;
 
 export default GlobalStyle;

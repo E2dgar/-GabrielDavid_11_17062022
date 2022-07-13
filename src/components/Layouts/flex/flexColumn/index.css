@@ -1,0 +1,23 @@
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-column.logement-heading-left {
+    align-items: flex-start;
+}
+
+.flex-column.logement-heading-right {
+    align-items: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+    .flex-column.logement-heading-right {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .flex-column .avatar {
+        order: 2;
+    }
+}

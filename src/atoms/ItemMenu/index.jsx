@@ -1,33 +1,16 @@
 import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import { colors, fontSize } from '../../styles/constants';
+import PropTypes from 'prop-types';
+import './index.css';
 
-const StyledItem = styled.li`
-    list-style: none;
-    padding: 1rem;
-
-    & a {
-        color: ${colors.primary};
-        text-decoration: none;
-        text-transform: capitalize;
-        font-size: ${fontSize.XL};
-        margin-left: 5rem;
-
-        &.active-link {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            text-transform: uppercase;
-            font-size: ${fontSize.XS};
-            margin-left: 0;
-        }
-    }
-`;
+/**
+ * Component for showing menu item
+ *
+ * @component
+ */
 
 const ItemMenu = ({ label, to }) => {
     return (
-        <StyledItem>
+        <li className="menu-item">
             <NavLink
                 to={to}
                 className={({ isActive }) =>
@@ -35,8 +18,19 @@ const ItemMenu = ({ label, to }) => {
                 }>
                 {label}
             </NavLink>
-        </StyledItem>
+        </li>
     );
+};
+
+ItemMenu.propTypes = {
+    /**
+     * Item label
+     */
+    label: PropTypes.string.isRequired,
+    /**
+     * Item to
+     */
+    to: PropTypes.string.isRequired
 };
 
 export default ItemMenu;

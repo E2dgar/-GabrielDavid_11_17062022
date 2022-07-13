@@ -1,7 +1,8 @@
-import H1Hero from '../../atoms/Texts/H1/Hero';
+import H1Hero from '../../atoms/Texts/H1/hero';
 import styled from 'styled-components';
 import { colors } from '../../styles/constants';
 import image from '../../assets/hero.jpg';
+import H1Home from '../../atoms/Texts/H1/hero';
 
 const StyledHero = styled.div`
     max-width: 100%;
@@ -38,7 +39,7 @@ const StyledHero = styled.div`
 const Hero = ({ content }) => {
     return (
         <StyledHero background={image}>
-            <H1Hero>{content?.h1} </H1Hero>
+            <H1Home content={content?.h1} />
         </StyledHero>
     );
 };

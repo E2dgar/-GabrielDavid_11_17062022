@@ -1,0 +1,9 @@
+.arrow-svg {
+    width: 25px;
+    height: 25px;
+    fill: none;
+}
+
+.arrow-svg path {
+    fill: var(--color-white);
+}

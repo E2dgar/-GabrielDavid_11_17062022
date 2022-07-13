@@ -1,25 +1,10 @@
 import { useState } from 'react';
 import ToogleHeading from '../../atoms/ToogleHeading';
 import { stringToClassName } from '../../services/strings';
-import styled from 'styled-components';
-import { colors } from '../../styles/constants';
+import './index.css';
+import AccordionContent from '../../atoms/accordion/accordionContent';
 
-const StyledDD = styled.dd`
-    max-height: 0;
-    transition: max-height 0.35s ease-in-out;
-
-    overflow: hidden;
-    background-color: ${colors.toogle_bkg};
-    margin: 0;
-    box-shadow: 0 -5px ${colors.toogle_bkg};
-    postion: relative;
-    z-index: -1;
-    &.show {
-        max-height: 50vh;
-    }
-`;
-
-const Toogle = ({ label, component }) => {
+const Toogle = ({ label, component, className }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const normalizeLabel = stringToClassName(label);
@@ -29,19 +14,19 @@ const Toogle = ({ label, component }) => {
     };
 
     return (
-        <>
+        <div className={className}>
             <ToogleHeading
                 label={label}
                 normalizeLabel={normalizeLabel}
                 handleToogle={handleToogle}
                 isPanelOpen={isOpen}
             />
-            <StyledDD
+            <AccordionContent
                 id={`${normalizeLabel}-panel`}
-                className={`panels ${isOpen ? 'show' : ''}`}>
-                {component}
-            </StyledDD>
-        </>
+                className={`panels ${isOpen ? 'show' : ''}`}
+                component={component}
+            />
+        </div>
     );
 };
 

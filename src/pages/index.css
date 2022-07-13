@@ -1,0 +1,13 @@
+.logement-heading {
+    padding: 30px 0 20px;
+}
+
+.logement-accordion {
+    width: calc(50% - 76px / 2);
+}
+
+@media screen and (max-width: 768px) {
+    .logement-accordion {
+        width: 100%;
+    }
+}

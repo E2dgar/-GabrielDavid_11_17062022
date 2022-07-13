@@ -1,0 +1,22 @@
+.accordion-list {
+    padding: 35px 12px 27px 20px;
+    margin: 0;
+    text-align: left;
+    list-style: none;
+}
+
+.accordion-list li {
+    font-weight: 400;
+    font-size: var(--font-L);
+    color: var(--color-primary);
+    line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+    .accordion-list {
+        padding: 22px 7px 52px 12px;
+    }
+    .accordion-list li {
+        font-size: var(--font-XS);
+    }
+}

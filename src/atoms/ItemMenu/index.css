@@ -1,0 +1,24 @@
+.menu-item {
+    list-style: none;
+    padding: 1rem;
+}
+
+.menu-item a {
+    color: var(--color-primary);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: var(--font-XL);
+    margin-left: 5rem;
+}
+
+.menu-item a.active-link {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-item a {
+        text-transform: uppercase;
+        font-size: var(--font-XS);
+        margin-left: 0;
+    }
+}

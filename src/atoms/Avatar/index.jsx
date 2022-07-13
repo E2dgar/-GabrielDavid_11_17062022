@@ -1,24 +1,31 @@
-import styled from 'styled-components';
-import { colors } from '../../styles/constants';
+import './index.css';
+import PropTypes from 'prop-types';
 
-const StyledAvatar = styled.figure`
-    figcaption {
-        color: ${colors.primary};
-    }
-
-    img {
-        border-radius: 50%;
-        max-width: 64px;
-    }
-`;
+/**
+ * Component for showing Name et Picture on Logement page
+ *
+ * @component
+ */
 
 const Avatar = ({ data }) => {
+    const [firstname, lastname] = data.name.split(' ');
+    console.log(firstname);
     return (
-        <StyledAvatar className="avatar">
+        <figure className="avatar">
+            <figcaption>
+                <span>{firstname}</span>
+                <span>{lastname}</span>
+            </figcaption>
             <img src={data?.picture} alt={data?.name} />
-            <figcaption>{data?.name}</figcaption>
-        </StyledAvatar>
+        </figure>
     );
+};
+
+Avatar.propTypes = {
+    /**
+     * Avatar data
+     */
+    data: PropTypes.object.isRequired
 };
 
 export default Avatar;

@@ -4,7 +4,7 @@ import Logement from './pages/Logement';
 import GlobalStyle from './styles/global';
 import { useFetch } from './services/hook';
 import { path } from './services/api/api';
-import Loader from './atoms/Loader';
+import Loader from './atoms/loader';
 import About from './pages/About';
 import P404 from './pages/404';
 
@@ -27,6 +27,7 @@ const App = () => {
     if (logementsError || contentError) {
         return <p style={{ color: 'red' }}>Erreur</p>;
     }
+
     return (
         <Router>
             <GlobalStyle />

@@ -1,0 +1,13 @@
+.h1-home {
+    font-size: var(--font-H1-home);
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+@media (max-width: 768px) {
+    .h1-home {
+        font-size: var(--font-XL);
+        text-align: left;
+        max-width: 19ch;
+    }
+}

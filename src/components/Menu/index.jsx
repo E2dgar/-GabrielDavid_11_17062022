@@ -1,4 +1,4 @@
-import ItemMenu from '../../atoms/ItemMenu';
+import ItemMenu from '../../atoms/itemMenu';
 import styled from 'styled-components';
 
 const StyledMenu = styled.ul`
