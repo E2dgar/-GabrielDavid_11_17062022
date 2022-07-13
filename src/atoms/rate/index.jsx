@@ -1,6 +1,6 @@
-import Star from '../svg/star';
 import PropTypes from 'prop-types';
 import './index.css';
+import Star from '../svg/star';
 
 /**
  * Component for showing stars rate

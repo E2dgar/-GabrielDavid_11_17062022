@@ -1,15 +1,16 @@
-import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import './index.css';
 
-const StyledMain = styled.main`
-    width: 100%;
-    max-width: 1256px;
-    margin: 0 auto 20rem;
-    text-align: center;
-    padding: 0 20px;
-`;
-
+/**
+ * Component for Main tag
+ * @component
+ */
 const MainLayout = ({ children }) => {
-    return <StyledMain>{children}</StyledMain>;
+    return <main>{children}</main>;
+};
+
+MainLayout.propTypes = {
+    children: PropTypes.node.isRequired
 };
 
 export default MainLayout;

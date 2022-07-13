@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Logement from './pages/Logement';
+import Home from './pages/home';
+import Logement from './pages/logement';
+import About from './pages/about';
+import P404 from './pages/404';
 import GlobalStyle from './styles/global';
 import { useFetch } from './services/hook';
 import { path } from './services/api/api';
 import Loader from './atoms/loader';
-import About from './pages/About';
-import P404 from './pages/404';
 
 const App = () => {
     const {

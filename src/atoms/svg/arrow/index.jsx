@@ -1,5 +1,9 @@
 import './index.css';
 
+/**
+ * Component for showing arrow svg
+ * @component
+ */
 const Arrow = () => {
     return (
         <svg

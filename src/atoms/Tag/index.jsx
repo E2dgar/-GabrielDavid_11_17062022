@@ -1,12 +1,16 @@
 import PropTypes from 'prop-types';
 import './index.css';
 
-const Tag = ({ children }) => {
-    return <li className="tag">{children}</li>;
+/**
+ * Component for showing tag
+ * @component
+ */
+const Tag = ({ content }) => {
+    return <li className="tag">{content}</li>;
 };
 
 Tag.propTypes = {
-    children: PropTypes.string.isRequired
+    content: PropTypes.string.isRequired
 };
 
 export default Tag;

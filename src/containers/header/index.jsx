@@ -1,33 +1,17 @@
 import logo from '../../assets/logo.png';
-import Menu from '../../components/Menu';
-import styled from 'styled-components';
+import Menu from '../../components/menu';
+import './index.css';
 
-const StyledHeader = styled.header`
-    width: 100%;
-    max-width: 1256px;
-    padding: 40px 20px 63px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @media (max-width: 768px) {
-        padding: 20px;
-    }
-
-    & img {
-        @media (max-width: 768px) {
-            max-width: 145px;
-        }
-    }
-`;
-
+/**
+ * Component for showing Header
+ * @component
+ */
 const Header = () => {
     return (
-        <StyledHeader>
+        <header>
             <img src={logo} alt="Logo Kasa" />
             <Menu />
-        </StyledHeader>
+        </header>
     );
 };
 

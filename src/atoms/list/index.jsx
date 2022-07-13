@@ -17,9 +17,6 @@ const List = ({ content }) => {
 };
 
 List.propTypes = {
-    /**
-     * List content
-     */
     content: PropTypes.array.isRequired
 };
 

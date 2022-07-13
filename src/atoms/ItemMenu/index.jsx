@@ -1,10 +1,9 @@
-import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './index.css';
+import { NavLink } from 'react-router-dom';
 
 /**
  * Component for showing menu item
- *
  * @component
  */
 
@@ -23,13 +22,7 @@ const ItemMenu = ({ label, to }) => {
 };
 
 ItemMenu.propTypes = {
-    /**
-     * Item label
-     */
     label: PropTypes.string.isRequired,
-    /**
-     * Item to
-     */
     to: PropTypes.string.isRequired
 };
 

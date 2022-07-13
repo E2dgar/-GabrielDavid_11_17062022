@@ -1,5 +1,10 @@
+import PropTypes from 'prop-types';
 import './index.css';
 
+/**
+ * Component for showing slider img
+ * @component
+ */
 const SliderImg = ({ content, index }) => {
     return (
         <img
@@ -8,6 +13,11 @@ const SliderImg = ({ content, index }) => {
             className="slider-img"
         />
     );
+};
+
+SliderImg.propTypes = {
+    content: PropTypes.object.isRequired,
+    index: PropTypes.number.isRequired
 };
 
 export default SliderImg;

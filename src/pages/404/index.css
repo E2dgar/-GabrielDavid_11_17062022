@@ -1,0 +1,34 @@
+.p404 {
+    padding-bottom: 10rem;
+}
+
+.p404 * {
+    color: var(--color-primary);
+}
+
+.p404 h1 {
+    font-size: var(--font-XXL);
+    font-weight: 700;
+    margin: 120px 0 66px;
+}
+
+.p404 p {
+    font-size: var(--font-H1-single);
+    margin-bottom: 182px;
+}
+
+@media screen and (max-width: 768px) {
+    .p404 h1 {
+        font-size: var(--font-XXL-mobile);
+        margin-bottom: 10px;
+    }
+
+    .p404 p {
+        font-size: var(--font-L);
+        margin-bottom: 130px;
+    }
+
+    .p404 a {
+        font-size: var(--font-M);
+    }
+}

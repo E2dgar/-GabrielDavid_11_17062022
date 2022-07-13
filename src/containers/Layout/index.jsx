@@ -1,6 +1,11 @@
-import Footer from '../Footer';
-import Header from '../Header';
+import PropTypes from 'prop-types';
+import Footer from '../footer';
+import Header from '../header';
 
+/**
+ * Component for page layout
+ * @component
+ */
 const Layout = ({ children, content }) => {
     return (
         <>
@@ -9,6 +14,11 @@ const Layout = ({ children, content }) => {
             <Footer content={content} />
         </>
     );
+};
+
+Layout.propTypes = {
+    children: PropTypes.node.isRequired,
+    content: PropTypes.object
 };
 
 export default Layout;

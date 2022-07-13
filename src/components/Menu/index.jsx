@@ -1,18 +1,18 @@
+import './index.css';
 import ItemMenu from '../../atoms/itemMenu';
-import styled from 'styled-components';
 
-const StyledMenu = styled.ul`
-    display: flex;
-    padding-left: 0;
-`;
+/**
+ * Component for showing Nav
+ * @component
+ */
 
 const Menu = () => {
     return (
         <nav>
-            <StyledMenu>
+            <ul className="menu-list">
                 <ItemMenu label="accueil" to="/" />
                 <ItemMenu label="à propos" to="/about" />
-            </StyledMenu>
+            </ul>
         </nav>
     );
 };

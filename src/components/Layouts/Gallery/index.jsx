@@ -1,34 +1,23 @@
-import Thumb from '../../Thumb/Thumb';
-import styled from 'styled-components';
-import { colors } from '../../../styles/constants';
+import PropTypes from 'prop-types';
+import './index.css';
+import Thumb from '../../thumb';
 
-const StyledGallery = styled.ul`
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 340px);
-    justify-content: center;
-    max-width: 1240px;
-    margin: 43px auto;
-    padding: 56px 0;
-    border-radius: 10px;
-    gap: 60px 50px;
-    background: ${colors.main_bkg};
-
-    @media (max-width: 768px) {
-        background: none;
-        margin-top: 22px;
-        padding: 0;
-        gap: 20px;
-        grid-template-columns: 1fr;
-    }
-`;
+/**
+ * Component for showing Home Gallery
+ * @component
+ */
 const Gallery = ({ data }) => {
     return (
-        <StyledGallery>
+        <ul className="gallery">
             {data?.map((elt) => (
                 <Thumb key={elt.id} data={elt} />
             ))}
-        </StyledGallery>
+        </ul>
     );
+};
+
+Gallery.propTypes = {
+    data: PropTypes.object.isRequired
 };
 
 export default Gallery;

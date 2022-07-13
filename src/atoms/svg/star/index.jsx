@@ -1,8 +1,9 @@
-import './index.css';
 import PropTypes from 'prop-types';
+import './index.css';
 
 /**
- * Star SVG
+ * Component for showing star svg
+ * @component
  */
 const Star = ({ checked }) => {
     return (
