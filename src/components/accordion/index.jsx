@@ -41,4 +41,8 @@ Accordion.propTypes = {
     className: PropTypes.string.isRequired
 };
 
+Accordion.defaultProps = {
+    className: ''
+};
+
 export default Accordion;

@@ -13,6 +13,7 @@ const P404 = ({ content }) => {
     useEffect(() => {
         document.title = '404';
     }, []);
+
     return (
         <Layout content={content?.footer}>
             <MainLayout>

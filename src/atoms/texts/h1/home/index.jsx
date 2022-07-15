@@ -6,11 +6,11 @@ import './index.css';
  * @component
  */
 const H1Home = ({ content }) => {
-    return <h1 className="h1-home">{content ?? content}</h1>;
+    return <h1 className="h1-home">{content}</h1>;
 };
 
 H1Home.propTypes = {
-    content: PropTypes.string.isRequired
+    content: PropTypes.string
 };
 
 export default H1Home;

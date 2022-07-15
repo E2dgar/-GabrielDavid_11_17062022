@@ -6,8 +6,10 @@
         transform: rotate(360deg);
     }
 }
-
 .loader {
+    margin: auto;
+}
+.loader-animation {
     padding: 50px;
     border: 10px solid var(--color-primary);
     border-bottom-color: transparent;
@@ -15,4 +17,11 @@
     animation: loading 1s infinite linear;
     height: 0;
     width: 0;
+}
+
+.loader-title {
+    margin-top: 5rem;
+    font-size: var(--font-L);
+    font-weight: bold;
+    color: var(--color-primary);
 }

@@ -5,8 +5,8 @@ import Home from './pages/home';
 import Logement from './pages/logement';
 import About from './pages/about';
 import P404 from './pages/404';
-import GlobalStyle from './styles/global';
 import Loader from './atoms/loader';
+import Error from './components/error';
 
 const App = () => {
     const {
@@ -25,13 +25,11 @@ const App = () => {
         return <Loader />;
     }
     if (logementsError || contentError) {
-        return <p style={{ color: 'red' }}>Erreur</p>;
+        return <Error />;
     }
 
     return (
         <Router>
-            <GlobalStyle />
-
             <Routes>
                 <Route path="*" element={<P404 content={content} />} />
 

@@ -11,7 +11,10 @@ const Rate = ({ rating }) => {
 
     for (let i = 0; i < starsChecked.length; i++) {
         starsChecked[i] = (
-            <Star key={`rate-star-${i}`} checked={rating > i && 'checked'} />
+            <Star
+                key={`rate-star-${i}`}
+                checked={rating > i ? 'checked' : ''}
+            />
         );
     }
 

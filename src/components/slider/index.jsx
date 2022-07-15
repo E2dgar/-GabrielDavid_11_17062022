@@ -44,7 +44,7 @@ const Slider = ({ content }) => {
 };
 
 Slider.propTypes = {
-    content: PropTypes.object.isRequired
+    content: PropTypes.array.isRequired
 };
 
 export default Slider;

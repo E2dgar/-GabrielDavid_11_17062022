@@ -29,8 +29,8 @@ const AccordionHeading = ({
 };
 
 AccordionHeading.propTypes = {
-    label: PropTypes.object.isRequired,
-    normalizeLabel: PropTypes.object.isRequired,
+    label: PropTypes.string.isRequired,
+    normalizeLabel: PropTypes.string.isRequired,
     handleToogle: PropTypes.func.isRequired,
     isPanelOpen: PropTypes.bool.isRequired
 };

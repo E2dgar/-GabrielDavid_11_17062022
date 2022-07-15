@@ -12,7 +12,7 @@ const Home = ({ data, content }) => {
     return (
         <Layout content={content.footer}>
             <MainLayout>
-                <Hero content={content?.home} />
+                <Hero content={content.home} />
 
                 <Gallery data={data} />
             </MainLayout>
@@ -21,7 +21,7 @@ const Home = ({ data, content }) => {
 };
 
 Home.propTypes = {
-    data: PropTypes.object.isRequired,
+    data: PropTypes.array.isRequired,
     content: PropTypes.object.isRequired
 };
 

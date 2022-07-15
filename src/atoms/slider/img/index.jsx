@@ -16,7 +16,7 @@ const SliderImg = ({ content, index }) => {
 };
 
 SliderImg.propTypes = {
-    content: PropTypes.object.isRequired,
+    content: PropTypes.array.isRequired,
     index: PropTypes.number.isRequired
 };
 

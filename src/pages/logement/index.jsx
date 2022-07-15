@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate, Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './index.css';
 import Avatar from '../../components/avatar';
@@ -12,10 +12,10 @@ import Paragraph from '../../atoms/texts/paragraph';
 import List from '../../atoms/list';
 import Slider from '../../components/slider';
 import Layout from '../../containers/layout';
-import Loader from '../../atoms/loader';
 import FlexBetweenContainer from '../../components/layouts/flex/flexBetween';
 import TagsList from '../../components/tagList';
 import FlexColumnContainer from '../../components/layouts/flex/flexColumn';
+import Loader from '../../atoms/loader';
 
 /**
  * Component for showing Logement page
@@ -23,28 +23,32 @@ import FlexColumnContainer from '../../components/layouts/flex/flexColumn';
  */
 const Logement = ({ data, content }) => {
     const { id } = useParams();
-    const [logement, setLogement] = useState();
+    const [logement, setLogement] = useState(null);
 
     useEffect(() => {
         setLogement(data.filter((elt) => elt.id === id)[0]);
+
         document.title = logement?.title;
     }, [data, content, id, logement]);
 
-    if (!logement || !content) {
+    if (logement === null) {
         return <Loader />;
     }
-    /*TODO redirection 404 si mauvais id*/
+    /*Renvoie vers la 404 si un ID inexistant de logement est entré dans l'URL*/
+    if (logement === undefined) {
+        return <Navigate replace to="/error" />;
+    }
 
     return (
         <Layout content={content.footer}>
             <MainLayout>
-                <Slider content={logement?.pictures} />
+                <Slider content={logement.pictures} />
 
                 <FlexBetweenContainer className="logement-heading">
                     <FlexColumnContainer className="logement-heading-left">
-                        <H1Logement content={logement?.title} />
+                        <H1Logement content={logement.title} />
 
-                        <H2 content={logement?.location} />
+                        <H2 content={logement.location} />
 
                         <TagsList logement={logement} />
                     </FlexColumnContainer>
@@ -52,7 +56,7 @@ const Logement = ({ data, content }) => {
                     <FlexColumnContainer className="logement-heading-right">
                         <Avatar data={logement.host} />
 
-                        <Rate rating={parseInt(logement?.rating)} />
+                        <Rate rating={parseInt(logement.rating)} />
                     </FlexColumnContainer>
                 </FlexBetweenContainer>
 
@@ -60,9 +64,7 @@ const Logement = ({ data, content }) => {
                     <Accordion
                         className="logement-accordion"
                         label="Description"
-                        component={
-                            <Paragraph content={logement?.description} />
-                        }
+                        component={<Paragraph content={logement.description} />}
                     />
 
                     <Accordion
@@ -77,7 +79,7 @@ const Logement = ({ data, content }) => {
 };
 
 Logement.propTypes = {
-    data: PropTypes.object.isRequired,
+    data: PropTypes.array.isRequired,
     content: PropTypes.object.isRequired
 };
 

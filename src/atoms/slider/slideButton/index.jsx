@@ -17,7 +17,7 @@ const SlideButton = ({ direction, handleClick }) => {
 
 SlideButton.propTypes = {
     direction: PropTypes.string.isRequired,
-    length: PropTypes.func.isRequired
+    handleClick: PropTypes.func.isRequired
 };
 
 export default SlideButton;

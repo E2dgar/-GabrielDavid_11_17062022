@@ -12,6 +12,7 @@ import Layout from '../../containers/layout';
  * @component
  */
 const About = ({ content }) => {
+    console.log(typeof content);
     useEffect(() => {
         document.title = 'A propos';
     }, []);
