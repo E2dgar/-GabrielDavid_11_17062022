@@ -10,7 +10,7 @@ const Footer = ({ content }) => {
     return (
         <footer>
             <img src={image} alt="Logo Kasa" />
-            <p>{content?.copy}</p>
+            <p>{content.copy}</p>
         </footer>
     );
 };

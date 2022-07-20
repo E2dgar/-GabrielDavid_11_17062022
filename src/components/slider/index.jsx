@@ -11,9 +11,10 @@ import SliderImg from '../../atoms/slider/img';
  */
 const Slider = ({ content }) => {
     const [index, setIndex] = useState(1);
+    const numberOfSlide = content.length;
 
     const handleNext = () => {
-        if (index === content?.length) {
+        if (index === numberOfSlide) {
             setIndex(1);
         } else {
             setIndex(index + 1);
@@ -22,7 +23,7 @@ const Slider = ({ content }) => {
 
     const handlePrev = () => {
         if (index === 1) {
-            setIndex(content?.length);
+            setIndex(numberOfSlide);
         } else {
             setIndex(index - 1);
         }
@@ -30,15 +31,21 @@ const Slider = ({ content }) => {
 
     return (
         <section className="slider">
-            <SlideButton direction="prev" handleClick={handlePrev} />
+            {numberOfSlide > 1 && (
+                <SlideButton direction="prev" handleClick={handlePrev} />
+            )}
 
             <div className="slides-container">
                 <SliderImg content={content} index={index} />
             </div>
 
-            <SlideIndex index={index} length={content?.length} />
+            {numberOfSlide > 1 && (
+                <>
+                    <SlideIndex index={index} length={content.length} />
 
-            <SlideButton direction="next" handleClick={handleNext} />
+                    <SlideButton direction="next" handleClick={handleNext} />
+                </>
+            )}
         </section>
     );
 };

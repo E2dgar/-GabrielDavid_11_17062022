@@ -2,9 +2,10 @@
     font-size: var(--font-H1-single);
     color: var(--color-primary);
     position: relative;
-    text-align: center;
+    text-align: left;
     z-index: 10;
     margin: 0;
+    padding-right: 1rem;
     line-height: 1.4;
 }
 @media (max-width: 768px) {

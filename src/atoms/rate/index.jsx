@@ -9,6 +9,10 @@ import Star from '../svg/star';
 const Rate = ({ rating }) => {
     const starsChecked = new Array(5);
 
+    /*On boucle 5 fois (note sur 5) 
+      On rempli le tableau starsChecked avec le composant Star
+      De index === 0 à index = rating - 1 on ajoute la class checked au composant
+     */
     for (let i = 0; i < starsChecked.length; i++) {
         starsChecked[i] = (
             <Star

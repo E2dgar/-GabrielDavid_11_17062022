@@ -22,7 +22,7 @@ const About = ({ content }) => {
                 <Hero className="about" />
 
                 <dl>
-                    {content?.about.map((elt) => (
+                    {content.about.map((elt) => (
                         <Accordion
                             key={elt.id}
                             label={elt.label}

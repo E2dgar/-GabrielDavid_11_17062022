@@ -9,7 +9,7 @@ import Thumb from '../../thumb';
 const Gallery = ({ data }) => {
     return (
         <ul className="gallery">
-            {data?.map((elt) => (
+            {data.map((elt) => (
                 <Thumb key={elt.id} data={elt} />
             ))}
         </ul>

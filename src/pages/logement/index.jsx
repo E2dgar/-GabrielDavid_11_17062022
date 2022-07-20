@@ -70,7 +70,7 @@ const Logement = ({ data, content }) => {
                     <Accordion
                         className="logement-accordion"
                         label="Équipements"
-                        component={<List content={logement?.equipments} />}
+                        component={<List content={logement.equipments} />}
                     />
                 </FlexBetweenContainer>
             </MainLayout>

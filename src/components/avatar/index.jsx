@@ -15,7 +15,7 @@ const Avatar = ({ data }) => {
                 <span>{firstname}</span>
                 <span>{lastname}</span>
             </figcaption>
-            <img src={data?.picture} alt={data?.name} />
+            <img src={data.picture} alt={data.name} />
         </figure>
     );
 };
