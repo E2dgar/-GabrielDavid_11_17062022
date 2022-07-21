@@ -1,4 +1,3 @@
-import { fontFamily, fontSize, colors } from './constants';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -403,8 +402,8 @@ const GlobalStyle = createGlobalStyle`
   * {
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
-      font-size: ${fontSize.L};
-      color: ${colors.white};     
+      font-size: var(--font-L);
+      color: var(--color-white);     
       box-sizing: border-box; 
     }
 
