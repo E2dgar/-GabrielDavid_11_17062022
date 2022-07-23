@@ -5,7 +5,7 @@
 }
 
 .star-svg path {
-    fill: var(--background-main);
+    fill: var(--background-star);
 }
 
 .star-svg.checked path {

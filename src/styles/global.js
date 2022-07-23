@@ -377,6 +377,7 @@ const GlobalStyle = createGlobalStyle`
     --color-white: #FFFFFF;
     --color-black: #000000;
     --background-main: #F6F6F6;
+    --background-star: #BBBBBB;
     --background-toogle: #F7F7F7;
     --background-avatar: #C4C4C4;
     --overlay-card : linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
